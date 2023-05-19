@@ -1,0 +1,13 @@
+material parch/circle
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture parch.png
+			}
+		}
+	}
+}

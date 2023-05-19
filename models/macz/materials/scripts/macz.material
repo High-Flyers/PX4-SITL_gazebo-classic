@@ -1,0 +1,13 @@
+material macz/ci
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture macz.png
+			}
+		}
+	}
+}
