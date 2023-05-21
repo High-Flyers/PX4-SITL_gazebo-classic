@@ -69,10 +69,10 @@ void GstCameraPlugin::startGstThread() {
   GstElement* encoder;
   if (useCuda) {
     encoder = gst_element_factory_make("nvh264enc", nullptr);
-    g_object_set(G_OBJECT(encoder), "bitrate", 800, "preset", 1, nullptr);
+    g_object_set(G_OBJECT(encoder), "bitrate", 8000, "preset", 1, nullptr);
   } else {
     encoder = gst_element_factory_make("x264enc", nullptr);
-    g_object_set(G_OBJECT(encoder), "bitrate", 800, "speed-preset", 6, "tune", 4, "key-int-max", 10, nullptr);
+    g_object_set(G_OBJECT(encoder), "bitrate", 8000, "speed-preset", 6, "tune", 4, "key-int-max", 10, nullptr);
   }
 
   GstElement* payloader;
