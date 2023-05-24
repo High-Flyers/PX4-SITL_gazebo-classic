@@ -21,1052 +21,536 @@
     </include>
 
 <include>
-<uri>model://typhoon_h480_custom</uri>
+<uri>model://typhoon_h480</uri>
 <pose>-36.1005 12.3774 -1.1 </pose>
 
 <name>drone</name>
-</include>
-
-<include>
-<uri>model://macz</uri>
-<pose>-36.1005 12.3774 -1.1 </pose>
-
-<name>macz_1</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.0189 5.05632 -1.1 </pose>
-
-<name>parch_2</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-56.2818 2.48406 -1.1 </pose>
-
-<name>macz_3</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-58.0052 4.87422 -1.1 </pose>
-
-<name>parch_4</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-58.1331 2.50906 -1.1 </pose>
-
-<name>macz_5</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-60.4859 2.49087 -1.1 </pose>
-
-<name>macz_6</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-62.1641 4.66789 -1.1 </pose>
-
-<name>macz_7</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-62.1761 2.49871 -1.1 </pose>
-
-<name>parch_8</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-69.7065 12.4033 -1.1 </pose>
-
-<name>parch_9</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-72.6662 12.508 -1.1 </pose>
-
-<name>macz_10</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-69.7821 15.1221 -1.1 </pose>
-
-<name>macz_11</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-72.7393 15.2444 -1.1 </pose>
-
-<name>macz_12</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-69.7368 17.9882 -1.1 </pose>
-
-<name>parch_13</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-72.9102 18.0944 -1.1 </pose>
-
-<name>macz_14</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-69.8491 20.8528 -1.1 </pose>
-
-<name>macz_15</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-72.8388 21.1735 -1.1 </pose>
-
-<name>macz_16</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-55.0324 32.8287 -1.1 </pose>
-
-<name>parch_17</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-62.3837 27.7952 -1.1 </pose>
-
-<name>parch_18</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-66.3981 35.7998 -1.1 </pose>
-
-<name>macz_19</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-56.0018 25.6208 -1.1 </pose>
-
-<name>macz_20</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-102.855 23.1819 -1.1 </pose>
-
-<name>macz_21</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-103.101 19.4894 -1.1 </pose>
-
-<name>parch_22</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-106.254 19.5443 -1.1 </pose>
-
-<name>parch_23</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-106.162 23.1547 -1.1 </pose>
-
-<name>macz_24</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-109.039 19.6037 -1.1 </pose>
-
-<name>macz_25</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-109.052 22.9643 -1.1 </pose>
-
-<name>macz_26</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-111.832 19.6595 -1.1 </pose>
-
-<name>macz_27</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-111.719 22.9316 -1.1 </pose>
-
-<name>macz_28</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-86.157 2.74946 -1.1 </pose>
-
-<name>macz_29</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-88.7258 2.83779 -1.1 </pose>
-
-<name>macz_30</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-86.0385 -0.190921 -1.1 </pose>
-
-<name>macz_31</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-88.8158 0.048265 -1.1 </pose>
-
-<name>macz_32</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-85.9668 -3.48814 -1.1 </pose>
-
-<name>parch_33</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-89.1693 -3.20564 -1.1 </pose>
-
-<name>parch_34</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-85.847 -6.60095 -1.1 </pose>
-
-<name>macz_35</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-105.489 -10.0625 -1.1 </pose>
-
-<name>parch_36</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-105.551 -7.19853 -1.1 </pose>
-
-<name>parch_37</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-107.915 -4.54901 -1.1 </pose>
-
-<name>parch_38</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-105.537 -4.77799 -1.1 </pose>
-
-<name>macz_39</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-107.976 -9.92266 -1.1 </pose>
-
-<name>macz_40</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-107.869 -1.52805 -1.1 </pose>
-
-<name>parch_41</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-107.888 1.17578 -1.1 </pose>
-
-<name>parch_42</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-105.315 1.23382 -1.1 </pose>
-
-<name>macz_43</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-58.9098 18.5745 -1.1 </pose>
-
-<name>parch_44</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-59.9162 41.3389 -1.1 </pose>
-
-<name>macz_45</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-53.279 40.7852 -1.1 </pose>
-
-<name>macz_46</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-59.5191 47.3765 -1.1 </pose>
-
-<name>macz_47</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-66.5488 48.1691 -1.1 </pose>
-
-<name>macz_48</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-54.8367 48.3752 -1.1 </pose>
-
-<name>macz_49</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-84.5064 32.3789 -1.1 </pose>
-
-<name>parch_50</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-86.3134 35.0861 -1.1 </pose>
-
-<name>macz_51</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-89.9647 32.4503 -1.1 </pose>
-
-<name>macz_52</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-92.6077 35.4505 -1.1 </pose>
-
-<name>macz_53</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-91.7658 42.7549 -1.1 </pose>
-
-<name>parch_54</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-50.4891 86.9139 -1.1 </pose>
-
-<name>macz_55</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-54.525 87.0405 -1.1 </pose>
-
-<name>macz_56</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-50.5254 91.0535 -1.1 </pose>
-
-<name>macz_57</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-50.6315 95.5347 -1.1 </pose>
-
-<name>parch_58</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-55.1342 95.7382 -1.1 </pose>
-
-<name>parch_59</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.2356 82.4809 -1.1 </pose>
-
-<name>parch_60</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-50.3203 82.7567 -1.1 </pose>
-
-<name>parch_61</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.1437 78.5966 -1.1 </pose>
-
-<name>parch_62</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-134.932 -10.729 -1.1 </pose>
-
-<name>parch_63</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-131.046 -10.4358 -1.1 </pose>
-
-<name>macz_64</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-135.067 -5.89531 -1.1 </pose>
-
-<name>parch_65</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-131.306 -1.89702 -1.1 </pose>
-
-<name>macz_66</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-134.976 -2.08347 -1.1 </pose>
-
-<name>parch_67</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-131.394 2.14902 -1.1 </pose>
-
-<name>macz_68</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-134.829 2.43383 -1.1 </pose>
-
-<name>parch_69</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-131.238 6.61264 -1.1 </pose>
-
-<name>macz_70</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-134.92 6.56939 -1.1 </pose>
-
-<name>macz_71</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>88.9544 -61.4031 -1.1 </pose>
-
-<name>macz_72</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>88.7893 -55.5101 -1.1 </pose>
-
-<name>parch_73</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>94.4442 -61.2386 -1.1 </pose>
-
-<name>parch_74</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>99.2375 -60.8765 -1.1 </pose>
-
-<name>macz_75</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>104.522 -60.6579 -1.1 </pose>
-
-<name>macz_76</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>99.5601 -55.6803 -1.1 </pose>
-
-<name>macz_77</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>109.036 -55.3265 -1.1 </pose>
-
-<name>parch_78</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>86.4237 -24.7061 -1.1 </pose>
-
-<name>parch_79</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>86.8186 -18.6899 -1.1 </pose>
-
-<name>parch_80</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>93.648 -18.5766 -1.1 </pose>
-
-<name>macz_81</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>93.429 -23.8593 -1.1 </pose>
-
-<name>macz_82</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>100.637 -18.5707 -1.1 </pose>
-
-<name>parch_83</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>100.663 -23.3413 -1.1 </pose>
-
-<name>parch_84</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>107.405 -18.3298 -1.1 </pose>
-
-<name>parch_85</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>107.65 -23.1095 -1.1 </pose>
-
-<name>parch_86</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>0.139415 0.024968 -1.1 2085 </pose>
-
-<name>macz_87</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-56.2818 2.48406 -1.1 </pose>
-
-<name>parch_88</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-58.0052 4.87422 -1.1 </pose>
-
-<name>parch_89</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-62.1641 4.66789 -1.1 </pose>
-
-<name>macz_90</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-106.254 19.5443 -1.1 </pose>
-
-<name>macz_91</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-109.052 22.9643 -1.1 </pose>
-
-<name>parch_92</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-111.832 19.6595 -1.1 </pose>
-
-<name>macz_93</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-86.157 2.74946 -1.1 </pose>
-
-<name>parch_94</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-85.847 -6.60095 -1.1 </pose>
-
-<name>macz_95</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-105.489 -10.0625 -1.1 </pose>
-
-<name>macz_96</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-105.551 -7.19853 -1.1 </pose>
-
-<name>parch_97</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-107.869 -1.52805 -1.1 </pose>
-
-<name>parch_98</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-105.315 1.23382 -1.1 </pose>
-
-<name>macz_99</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-58.9098 18.5745 -1.1 </pose>
-
-<name>macz_100</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-62.1761 2.49871 -1.1 </pose>
-
-<name>parch_101</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-59.5191 47.3765 -1.1 </pose>
-
-<name>parch_102</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.8367 48.3752 -1.1 </pose>
-
-<name>parch_103</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-89.9647 32.4503 -1.1 </pose>
-
-<name>macz_104</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-92.6077 35.4505 -1.1 </pose>
-
-<name>parch_105</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-50.5254 91.0535 -1.1 </pose>
-
-<name>parch_106</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-50.6315 95.5347 -1.1 </pose>
-
-<name>parch_107</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-55.1342 95.7382 -1.1 </pose>
-
-<name>parch_108</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-50.3203 82.7567 -1.1 </pose>
-
-<name>macz_109</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.1437 78.5966 -1.1 </pose>
-
-<name>parch_110</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-134.932 -10.729 -1.1 </pose>
-
-<name>macz_111</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-69.7065 12.4033 -1.1 </pose>
-
-<name>parch_112</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-134.976 -2.08347 -1.1 </pose>
-
-<name>macz_113</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-131.394 2.14902 -1.1 </pose>
-
-<name>parch_114</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-134.92 6.56939 -1.1 </pose>
-
-<name>macz_115</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>88.9544 -61.4031 -1.1 </pose>
-
-<name>macz_116</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>94.4442 -61.2386 -1.1 </pose>
-
-<name>macz_117</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>104.522 -60.6579 -1.1 </pose>
-
-<name>macz_118</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>109.036 -55.3265 -1.1 </pose>
-
-<name>macz_119</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>93.648 -18.5766 -1.1 </pose>
-
-<name>macz_120</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>93.429 -23.8593 -1.1 </pose>
-
-<name>parch_121</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>100.637 -18.5707 -1.1 </pose>
-
-<name>macz_122</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-69.7368 17.9882 -1.1 </pose>
-
-<name>parch_123</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>100.663 -23.3413 -1.1 </pose>
-
-<name>parch_124</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>107.405 -18.3298 -1.1 </pose>
-
-<name>macz_125</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>107.65 -23.1095 -1.1 </pose>
-
-<name>parch_126</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-72.9102 18.0944 -1.1 </pose>
-
-<name>parch_127</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-69.8491 20.8528 -1.1 </pose>
-
-<name>macz_128</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-66.3981 35.7998 -1.1 </pose>
-
-<name>parch_129</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-56.0018 25.6208 -1.1 </pose>
-
-<name>parch_130</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-102.855 23.1819 -1.1 </pose>
-
-<name>macz_131</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.0851 2.51183 -1.1 </pose>
-
-<name>parch_132</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.0189 5.05632 -1.1 </pose>
-
-<name>parch_133</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-58.1331 2.50906 -1.1 </pose>
-
-<name>macz_134</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-106.162 23.1547 -1.1 </pose>
-
-<name>macz_135</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-109.039 19.6037 -1.1 </pose>
-
-<name>parch_136</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-111.719 22.9316 -1.1 </pose>
-
-<name>parch_137</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-88.7258 2.83779 -1.1 </pose>
-
-<name>parch_138</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-86.0385 -0.190921 -1.1 </pose>
-
-<name>parch_139</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-88.8158 0.048265 -1.1 </pose>
-
-<name>macz_140</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-85.9668 -3.48814 -1.1 </pose>
-
-<name>macz_141</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-89.1693 -3.20564 -1.1 </pose>
-
-<name>parch_142</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-107.915 -4.54901 -1.1 </pose>
-
-<name>macz_143</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-105.537 -4.77799 -1.1 </pose>
-
-<name>parch_144</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-60.4859 2.49087 -1.1 </pose>
-
-<name>parch_145</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-107.976 -9.92266 -1.1 </pose>
-
-<name>macz_146</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-107.888 1.17578 -1.1 </pose>
-
-<name>macz_147</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-59.9162 41.3389 -1.1 </pose>
-
-<name>macz_148</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-53.279 40.7852 -1.1 </pose>
-
-<name>parch_149</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-66.5488 48.1691 -1.1 </pose>
-
-<name>parch_150</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-84.5064 32.3789 -1.1 </pose>
-
-<name>macz_151</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-86.3134 35.0861 -1.1 </pose>
-
-<name>macz_152</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-91.7658 42.7549 -1.1 </pose>
-
-<name>macz_153</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-50.4891 86.9139 -1.1 </pose>
-
-<name>parch_154</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.525 87.0405 -1.1 </pose>
-
-<name>parch_155</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-72.6662 12.508 -1.1 </pose>
-
-<name>parch_156</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-54.2356 82.4809 -1.1 </pose>
-
-<name>parch_157</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-131.046 -10.4358 -1.1 </pose>
-
-<name>parch_158</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-135.067 -5.89531 -1.1 </pose>
-
-<name>parch_159</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-131.306 -1.89702 -1.1 </pose>
-
-<name>macz_160</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-134.829 2.43383 -1.1 </pose>
-
-<name>parch_161</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-131.238 6.61264 -1.1 </pose>
-
-<name>macz_162</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>88.7893 -55.5101 -1.1 </pose>
-
-<name>macz_163</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>99.2375 -60.8765 -1.1 </pose>
-
-<name>parch_164</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>99.5601 -55.6803 -1.1 </pose>
-
-<name>parch_165</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>86.4237 -24.7061 -1.1 </pose>
-
-<name>parch_166</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-69.7821 15.1221 -1.1 </pose>
-
-<name>macz_167</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>86.8186 -18.6899 -1.1 </pose>
-
-<name>parch_168</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-72.7393 15.2444 -1.1 </pose>
-
-<name>parch_169</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-72.8388 21.1735 -1.1 </pose>
-
-<name>parch_170</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-55.0324 32.8287 -1.1 </pose>
-
-<name>macz_171</name>
-</include>
-<include>
-<uri>model://parch</uri>
-<pose>-62.3837 27.7952 -1.1 </pose>
-
-<name>parch_172</name>
-</include>
-<include>
-<uri>model://macz</uri>
-<pose>-103.101 19.4894 -1.1 </pose>
-
-<name>macz_173</name>
-</include>
-
-
+</include> 
+
+    <include>
+      <uri>model://parch</uri>
+      <pose>-54.0189 5.05632 -1.1 </pose>
+
+      <name>parch_2</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-56.2818 2.48406 -1.1 </pose>
+
+      <name>macz_3</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-58.0052 4.87422 -1.1 </pose>
+
+      <name>parch_4</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-58.1331 2.50906 -1.1 </pose>
+
+      <name>macz_5</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-60.4859 2.49087 -1.1 </pose>
+
+      <name>macz_6</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-62.1641 4.66789 -1.1 </pose>
+
+      <name>macz_7</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-62.1761 2.49871 -1.1 </pose>
+
+      <name>parch_8</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-69.7065 12.4033 -1.1 </pose>
+
+      <name>parch_9</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-72.6662 12.508 -1.1 </pose>
+
+      <name>macz_10</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-69.7821 15.1221 -1.1 </pose>
+
+      <name>macz_11</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-72.7393 15.2444 -1.1 </pose>
+
+      <name>macz_12</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-69.7368 17.9882 -1.1 </pose>
+
+      <name>parch_13</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-72.9102 18.0944 -1.1 </pose>
+
+      <name>macz_14</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-69.8491 20.8528 -1.1 </pose>
+
+      <name>macz_15</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-72.8388 21.1735 -1.1 </pose>
+
+      <name>macz_16</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-55.0324 32.8287 -1.1 </pose>
+
+      <name>parch_17</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-62.3837 27.7952 -1.1 </pose>
+
+      <name>parch_18</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-66.3981 35.7998 -1.1 </pose>
+
+      <name>macz_19</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-56.0018 25.6208 -1.1 </pose>
+
+      <name>macz_20</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-102.855 23.1819 -1.1 </pose>
+
+      <name>macz_21</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-103.101 19.4894 -1.1 </pose>
+
+      <name>parch_22</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-106.254 19.5443 -1.1 </pose>
+
+      <name>parch_23</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-106.162 23.1547 -1.1 </pose>
+
+      <name>macz_24</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-109.039 19.6037 -1.1 </pose>
+
+      <name>macz_25</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-109.052 22.9643 -1.1 </pose>
+
+      <name>macz_26</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-111.832 19.6595 -1.1 </pose>
+
+      <name>macz_27</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-111.719 22.9316 -1.1 </pose>
+
+      <name>macz_28</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-86.157 2.74946 -1.1 </pose>
+
+      <name>macz_29</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-88.7258 2.83779 -1.1 </pose>
+
+      <name>macz_30</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-86.0385 -0.190921 -1.1 </pose>
+
+      <name>macz_31</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-88.8158 0.048265 -1.1 </pose>
+
+      <name>macz_32</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-85.9668 -3.48814 -1.1 </pose>
+
+      <name>parch_33</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-89.1693 -3.20564 -1.1 </pose>
+
+      <name>parch_34</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-85.847 -6.60095 -1.1 </pose>
+
+      <name>macz_35</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-105.489 -10.0625 -1.1 </pose>
+
+      <name>parch_36</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-105.551 -7.19853 -1.1 </pose>
+
+      <name>parch_37</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-107.915 -4.54901 -1.1 </pose>
+
+      <name>parch_38</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-105.537 -4.77799 -1.1 </pose>
+
+      <name>macz_39</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-107.976 -9.92266 -1.1 </pose>
+
+      <name>macz_40</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-107.869 -1.52805 -1.1 </pose>
+
+      <name>parch_41</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-107.888 1.17578 -1.1 </pose>
+
+      <name>parch_42</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-105.315 1.23382 -1.1 </pose>
+
+      <name>macz_43</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-58.9098 18.5745 -1.1 </pose>
+
+      <name>parch_44</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-59.9162 41.3389 -1.1 </pose>
+
+      <name>macz_45</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-53.279 40.7852 -1.1 </pose>
+
+      <name>macz_46</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-59.5191 47.3765 -1.1 </pose>
+
+      <name>macz_47</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-66.5488 48.1691 -1.1 </pose>
+
+      <name>macz_48</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-54.8367 48.3752 -1.1 </pose>
+
+      <name>macz_49</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-84.5064 32.3789 -1.1 </pose>
+
+      <name>parch_50</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-86.3134 35.0861 -1.1 </pose>
+
+      <name>macz_51</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-89.9647 32.4503 -1.1 </pose>
+
+      <name>macz_52</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-92.6077 35.4505 -1.1 </pose>
+
+      <name>macz_53</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-91.7658 42.7549 -1.1 </pose>
+
+      <name>parch_54</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-50.4891 86.9139 -1.1 </pose>
+
+      <name>macz_55</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-54.525 87.0405 -1.1 </pose>
+
+      <name>macz_56</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-50.5254 91.0535 -1.1 </pose>
+
+      <name>macz_57</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-50.6315 95.5347 -1.1 </pose>
+
+      <name>parch_58</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-55.1342 95.7382 -1.1 </pose>
+
+      <name>parch_59</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-54.2356 82.4809 -1.1 </pose>
+
+      <name>parch_60</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-50.3203 82.7567 -1.1 </pose>
+
+      <name>parch_61</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-54.1437 78.5966 -1.1 </pose>
+
+      <name>parch_62</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-134.932 -10.729 -1.1 </pose>
+
+      <name>parch_63</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-131.046 -10.4358 -1.1 </pose>
+
+      <name>macz_64</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-135.067 -5.89531 -1.1 </pose>
+
+      <name>parch_65</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-131.306 -1.89702 -1.1 </pose>
+
+      <name>macz_66</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>-134.976 -2.08347 -1.1 </pose>
+
+      <name>parch_67</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-131.394 2.14902 -1.1 </pose>
+
+      <name>macz_68</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>-134.829 2.43383 -1.1 </pose>
+
+      <name>parch_69</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>-131.238 6.61264 -1.1 </pose>
+
+      <name>macz_70</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>-134.92 6.56939 -1.1 </pose>
+
+      <name>macz_71</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>88.9544 -61.4031 -1.1 </pose>
+
+      <name>macz_72</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>88.7893 -55.5101 -1.1 </pose>
+
+      <name>parch_73</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>94.4442 -61.2386 -1.1 </pose>
+
+      <name>parch_74</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>99.2375 -60.8765 -1.1 </pose>
+
+      <name>macz_75</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>104.522 -60.6579 -1.1 </pose>
+
+      <name>macz_76</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>99.5601 -55.6803 -1.1 </pose>
+
+      <name>macz_77</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>109.036 -55.3265 -1.1 </pose>
+
+      <name>parch_78</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>86.4237 -24.7061 -1.1 </pose>
+
+      <name>parch_79</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>86.8186 -18.6899 -1.1 </pose>
+
+      <name>parch_80</name>
+    </include>
+    <include>
+      <uri>model://healthy</uri>
+      <pose>93.648 -18.5766 -1.1 </pose>
+
+      <name>macz_81</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>93.429 -23.8593 -1.1 </pose>
+
+      <name>macz_82</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>100.637 -18.5707 -1.1 </pose>
+
+      <name>parch_83</name>
+    </include>
+    <include>
+      <uri>model://sus</uri>
+      <pose>100.663 -23.3413 -1.1 </pose>
+
+      <name>parch_84</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>107.405 -18.3298 -1.1 </pose>
+
+      <name>parch_85</name>
+    </include>
+    <include>
+      <uri>model://parch</uri>
+      <pose>107.65 -23.1095 -1.1 </pose>
+
+      <name>parch_86</name>
+    </include>
+    <include>
+      <uri>model://macz</uri>
+      <pose>0.139415 0.024968 -1.1 2085 </pose>
+
+      <name>macz_87</name>
+    </include>
+
+
+    <include>
+      <uri>model://sus</uri>
+      <pose>-54.0851 2.51183 -1.1 </pose>
+
+      <name>parch_132</name>
+    </include>
 
 
     <spherical_coordinates>

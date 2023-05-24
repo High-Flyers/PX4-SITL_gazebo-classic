@@ -1,0 +1,13 @@
+material sus/ci
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sus.png
+			}
+		}
+	}
+}

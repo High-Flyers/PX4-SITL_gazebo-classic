@@ -4,6 +4,8 @@ material parch/circle
 	{
 		pass
 		{
+			alpha_rejection greater 128
+			
 			texture_unit
 			{
 				texture parch.png

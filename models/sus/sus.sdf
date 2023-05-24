@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="sus">
+    <static>true</static>
+    <link name="pad">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 .001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <box>
+            <size>1 1 .001</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sus/materials/scripts</uri>
+            <uri>model://sus/materials/textures</uri>
+            <name>sus/ci</name>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="tube">
+      <collision name="collision">
+        <pose>0 0 0.8 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+            <scale>0.6 0.6 10.526</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <pose>0 0 0.8 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+            <scale>0.6 0.6 10.526</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

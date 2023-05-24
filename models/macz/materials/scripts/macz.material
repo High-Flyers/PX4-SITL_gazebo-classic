@@ -4,6 +4,8 @@ material macz/ci
 	{
 		pass
 		{
+			alpha_rejection greater 128
+			
 			texture_unit
 			{
 				texture macz.png
