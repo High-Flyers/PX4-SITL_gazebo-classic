@@ -1,0 +1,5058 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='grass'>
+      <pose>1.44006 2.40824 -1.3 0 -0 0</pose>
+      <static>1</static>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://grass/media/grass.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grass/media/Textures/</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://grass/media/grass.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='macz'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://macz/materials/scripts</uri>
+              <uri>model://macz/materials/textures</uri>
+              <name>macz/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>42.4382 -38.218 0 0 -0 0</pose>
+    </model>
+    <model name='macz_1'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://macz/materials/scripts</uri>
+              <uri>model://macz/materials/textures</uri>
+              <name>macz/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>27.4285 21.2464 0 0 -0 0</pose>
+    </model>
+    <model name='macz_2'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://macz/materials/scripts</uri>
+              <uri>model://macz/materials/textures</uri>
+              <name>macz/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>42.2532 36.1154 0 0 -0 0</pose>
+    </model>
+    <model name='parch'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://parch/materials/scripts</uri>
+              <uri>model://parch/materials/textures</uri>
+              <name>parch/circle</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>25.7384 -13.6505 0 0 -0 0</pose>
+    </model>
+    <model name='parch_0'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://parch/materials/scripts</uri>
+              <uri>model://parch/materials/textures</uri>
+              <name>parch/circle</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>41.8058 -14.1457 0 0 -0 0</pose>
+    </model>
+    <model name='parch_1'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://parch/materials/scripts</uri>
+              <uri>model://parch/materials/textures</uri>
+              <name>parch/circle</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>40.5371 20.2628 0 0 -0 0</pose>
+    </model>
+    <model name='healthy'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>9.66173 -36.7666 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_0'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>29.3036 -37.3707 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_1'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>28.1736 38.7167 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_2'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-12.4812 -37.9052 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_3'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-12.185 -18.8259 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_4'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.1604 -15.8832 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_5'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.0566 6.33012 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_6'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.4363 23.5417 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_7'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.589 37.9867 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_8'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-2.86503 38.1746 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_9'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-2.54751 20.823 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_10'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-16.4981 21.0733 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_11'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-16.4011 37.4587 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_12'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-27.5068 21.7252 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_13'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>33.8331 -13.8875 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_14'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>27.3685 -25.1445 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_15'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>41.3759 3.04051 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_16'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>26.4073 2.20253 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_17'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>41.1023 28.0364 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_18'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>40.7801 11.7874 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_19'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>41.0979 -25.6819 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_20'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-1.10612 -36.89 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_21'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-0.930026 -17.429 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_22'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>19.4897 -36.6904 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_23'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>26.5051 -6.22467 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_24'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>27.2387 11.8563 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_25'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>27.8047 29.7436 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_26'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>34.1454 -1.34136 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_27'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>33.8351 9.08558 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_28'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>34.023 19.8752 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_29'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>34.1305 29.0331 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_30'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>34.9086 38.284 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_31'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>18.8666 -25.9584 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_32'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>18.7247 -13.6135 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_33'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>18.8613 -1.94464 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_34'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>18.9882 11.2472 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_35'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>19.2676 22.8298 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_36'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>19.5194 31.4715 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_37'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>19.7613 39.2744 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_38'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>10.2096 -6.02577 0 0 -0 0</pose>
+    </model>
+    <model name='sus'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sus/materials/scripts</uri>
+              <uri>model://sus/materials/textures</uri>
+              <name>sus/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>8.69847 -25.756 0 0 -0 0</pose>
+    </model>
+    <model name='sus_0'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sus/materials/scripts</uri>
+              <uri>model://sus/materials/textures</uri>
+              <name>sus/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-10.13 -27.393 0 0 -0 0</pose>
+    </model>
+    <model name='sus_1'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sus/materials/scripts</uri>
+              <uri>model://sus/materials/textures</uri>
+              <name>sus/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>41.6865 -4.79628 0 0 -0 0</pose>
+    </model>
+    <model name='sus_2'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sus/materials/scripts</uri>
+              <uri>model://sus/materials/textures</uri>
+              <name>sus/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>35.8502 -37.1799 0 0 -0 0</pose>
+    </model>
+    <model name='healthy_39'>
+      <static>1</static>
+      <link name='pad'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://healthy/materials/scripts</uri>
+              <uri>model://healthy/materials/textures</uri>
+              <name>healthy/ci</name>
+            </script>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='tube'>
+        <collision name='collision'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.8 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://tube_9_5mm/meshes/tube_9_5.dae</uri>
+              <scale>0.6 0.6 10.526</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-1.05491 -26.6489 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>390 751000000</sim_time>
+      <real_time>395 522555558</real_time>
+      <wall_time>1685222124 669893955</wall_time>
+      <iterations>390751</iterations>
+      <model name='grass'>
+        <pose>1.44006 2.40824 -0.01 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='body'>
+          <pose>1.44006 2.40824 -0.01 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy'>
+        <pose>9.66173 -36.7666 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>9.66173 -36.7666 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>9.66173 -36.7666 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_0'>
+        <pose>29.3036 -37.3707 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>29.3036 -37.3707 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>29.3036 -37.3707 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_1'>
+        <pose>28.1736 38.7167 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>28.1736 38.7167 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>28.1736 38.7167 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_10'>
+        <pose>-16.4981 21.0733 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-16.4981 21.0733 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-16.4981 21.0733 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_11'>
+        <pose>-16.4011 37.4587 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-16.4011 37.4587 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-16.4011 37.4587 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_12'>
+        <pose>-27.5068 21.7252 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-27.5068 21.7252 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-27.5068 21.7252 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_13'>
+        <pose>33.8331 -13.8875 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>33.8331 -13.8875 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>33.8331 -13.8875 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_14'>
+        <pose>27.3685 -25.1445 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>27.3685 -25.1445 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>27.3685 -25.1445 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_15'>
+        <pose>41.3759 3.04051 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>41.3759 3.04051 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>41.3759 3.04051 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_16'>
+        <pose>26.4073 2.20253 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>26.4073 2.20253 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>26.4073 2.20253 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_17'>
+        <pose>41.1023 28.0364 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>41.1023 28.0364 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>41.1023 28.0364 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_18'>
+        <pose>40.7801 11.7874 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>40.7801 11.7874 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>40.7801 11.7874 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_19'>
+        <pose>41.0979 -25.6819 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>41.0979 -25.6819 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>41.0979 -25.6819 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_2'>
+        <pose>-12.4812 -37.9052 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-12.4812 -37.9052 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-12.4812 -37.9052 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_20'>
+        <pose>-1.10612 -36.89 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-1.10612 -36.89 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-1.10612 -36.89 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_21'>
+        <pose>-0.930026 -17.429 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-0.930026 -17.429 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-0.930026 -17.429 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_22'>
+        <pose>19.4897 -36.6904 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>19.4897 -36.6904 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>19.4897 -36.6904 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_23'>
+        <pose>26.5051 -6.22467 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>26.5051 -6.22467 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>26.5051 -6.22467 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_24'>
+        <pose>27.2387 11.8563 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>27.2387 11.8563 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>27.2387 11.8563 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_25'>
+        <pose>27.8047 29.7436 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>27.8047 29.7436 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>27.8047 29.7436 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_26'>
+        <pose>34.1454 -1.34136 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>34.1454 -1.34136 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>34.1454 -1.34136 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_27'>
+        <pose>33.8351 9.08558 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>33.8351 9.08558 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>33.8351 9.08558 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_28'>
+        <pose>34.023 19.8752 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>34.023 19.8752 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>34.023 19.8752 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_29'>
+        <pose>34.1305 29.0331 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>34.1305 29.0331 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>34.1305 29.0331 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_3'>
+        <pose>-12.185 -18.8259 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-12.185 -18.8259 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-12.185 -18.8259 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_30'>
+        <pose>34.9086 38.284 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>34.9086 38.284 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>34.9086 38.284 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_31'>
+        <pose>18.8666 -25.9584 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>18.8666 -25.9584 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>18.8666 -25.9584 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_32'>
+        <pose>18.7247 -13.6135 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>18.7247 -13.6135 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>18.7247 -13.6135 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_33'>
+        <pose>18.8613 -1.94464 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>18.8613 -1.94464 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>18.8613 -1.94464 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_34'>
+        <pose>18.9882 11.2472 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>18.9882 11.2472 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>18.9882 11.2472 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_35'>
+        <pose>19.2676 22.8298 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>19.2676 22.8298 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>19.2676 22.8298 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_36'>
+        <pose>19.5194 31.4715 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>19.5194 31.4715 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>19.5194 31.4715 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_37'>
+        <pose>19.7613 39.2744 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>19.7613 39.2744 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>19.7613 39.2744 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_38'>
+        <pose>10.2096 -6.02577 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>10.2096 -6.02577 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>10.2096 -6.02577 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_39'>
+        <pose>-1.05491 -26.6489 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-1.05491 -26.6489 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-1.05491 -26.6489 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_4'>
+        <pose>10.1604 -15.8832 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>10.1604 -15.8832 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>10.1604 -15.8832 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_5'>
+        <pose>10.0566 6.33012 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>10.0566 6.33012 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>10.0566 6.33012 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_6'>
+        <pose>10.4363 23.5417 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>10.4363 23.5417 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>10.4363 23.5417 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_7'>
+        <pose>10.589 37.9867 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>10.589 37.9867 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>10.589 37.9867 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_8'>
+        <pose>-2.86503 38.1746 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-2.86503 38.1746 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-2.86503 38.1746 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='healthy_9'>
+        <pose>-2.54751 20.823 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-2.54751 20.823 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-2.54751 20.823 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='macz'>
+        <pose>42.4382 -38.218 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>42.4382 -38.218 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>42.4382 -38.218 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='macz_1'>
+        <pose>27.4285 21.2464 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>27.4285 21.2464 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>27.4285 21.2464 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='macz_2'>
+        <pose>42.2532 36.1154 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>42.2532 36.1154 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>42.2532 36.1154 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='parch'>
+        <pose>25.7384 -13.6505 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>25.7384 -13.6505 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>25.7384 -13.6505 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='parch_0'>
+        <pose>41.8058 -14.1457 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>41.8058 -14.1457 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>41.8058 -14.1457 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='parch_1'>
+        <pose>40.5371 20.2628 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>40.5371 20.2628 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>40.5371 20.2628 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sus'>
+        <pose>8.69847 -25.756 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>8.69847 -25.756 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>8.69847 -25.756 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sus_0'>
+        <pose>-10.13 -27.393 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>-10.13 -27.393 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>-10.13 -27.393 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sus_1'>
+        <pose>41.6865 -4.79628 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>41.6865 -4.79628 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>41.6865 -4.79628 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sus_2'>
+        <pose>35.8502 -37.1799 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='pad'>
+          <pose>35.8502 -37.1799 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='tube'>
+          <pose>35.8502 -37.1799 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>68.6942 6.48906 116.893 0 1.11564 3.13619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
